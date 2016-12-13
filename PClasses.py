@@ -5,7 +5,8 @@
 #20 HP
 #4 damage, 8 if SE, 2 if NE
 #Win by catching/defeating all Pokemon
-#Capture: More likely at 25% HP, impossible at 100
+#import random
+# x = random.randint(0,100) - capture rate
 #Pokemon only has type, all have 20 HP
 #Getters and setters
 
