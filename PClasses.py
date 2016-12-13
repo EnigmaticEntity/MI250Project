@@ -23,14 +23,14 @@ class Pokemon: #Constructor only name, MaxHP - 20, currentHP
 			self.lmnt = 'Fire'
 		elif(self.n == 'Popplio' or self.n == 'Squirtle' or self.n == 'Oshawott'):
 			self.lmnt = 'Water'
-	def attack(name1,name2):
-		p1 = get_type(name1)
-		p2 = get_type(name2)
-		if(p1 == p2):
+	def attack(p1,p2):
+		offense = get_type(p1)
+		defense = get_type(p2)
+		if(offense == defense):
 			return 1
-		elif(p1 == 'Grass' and p2 == 'Fire' or p1 == 'Fire' and p2 == 'Water' or p1 == 'Water' and p2 == 'Grass'):
+		elif(offense == 'Grass' and defense == 'Fire' or offense == 'Fire' and offense == 'Water' or offense == 'Water' and offense == 'Grass'):
 			return 0
-		elif(p1 == 'Grass' and p2 == 'Water' or p1 == 'Fire' and p2 == 'Grass' or p1 == 'Water' and p2 == 'Fire'):
+		elif(offense == 'Grass' and defense == 'Water' or defense == 'Fire' and defense == 'Grass' or defense == 'Water' and defense == 'Fire'):
 			return 2
 		
 class Attack: #Type (1: normal, 2: elemental), damage depending on type
