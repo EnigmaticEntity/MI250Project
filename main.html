@@ -1,0 +1,34 @@
+<html>
+
+<!--
+Lecture 3 - CSC 210 Fall 2015
+Philip Guo
+
+Form that calls cgi-bin/lecture3.py with a POST request
+
+-->
+
+	<head>
+		<title>My first form</title>
+	</head>
+
+	<body>
+
+<h1>Please enter your info:</h1>
+
+<form method="post" action=".\cgi-bin\lecture3.py">
+
+User: <input name="my_name" type=text size="30"/>
+<br/>
+
+Password: <input name="my_pw" type=text size="10"/>
+<br/>
+
+
+
+<input type="submit" name="login" value="Login"/>
+
+</form>
+
+	</body>
+</html>
