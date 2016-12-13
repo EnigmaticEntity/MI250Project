@@ -22,10 +22,3 @@ class Attack: #Type (1: normal, 2: elemental), damage depending on type
 		self.name = name
 		self.element = element
 		self.damage = damage
-		
-class Trainer: #Name, Pokemon 1,2,3,4,5,6, start with one up to six
-	def __init__(self,name,team):
-		self.name = name
-		self.team = [None] * 6
-	def add_Pokemon(self,pokemon):
-		self.team.append(pokemon)
