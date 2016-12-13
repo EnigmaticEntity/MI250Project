@@ -19,6 +19,6 @@ class Pokemon: #Constructor only name, MaxHP - 20, currentHP
 		
 class Attack: #Type (1: normal, 2: elemental), damage depending on type
 	def __init__(self,name,element,damage=4):
-		self.name = name
-		self.element = element
-		self.damage = damage
+		self.n = name
+		self.lmnt = element
+		self.dmg = damage
