@@ -12,10 +12,10 @@
 
 class Pokemon: #Constructor only name, MaxHP - 20, currentHP
 	def __init__(self, name, currentHP, element, maxHP=20):
-		self.name = name
-		self.maxHP = 20
-		self.currentHP = maxHP
-		self.element = element
+		self.n = name
+		self.mhp = 20
+		self.chp = currentHP
+		self.lmnt = element
 		
 class Attack: #Type (1: normal, 2: elemental), damage depending on type
 	def __init__(self,name,element,damage=4):
