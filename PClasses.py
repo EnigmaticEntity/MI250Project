@@ -13,12 +13,23 @@
 class Pokemon: #Constructor only name, MaxHP - 20, currentHP
 	def __init__(self, name, currentHP, element, maxHP=20):
 		self.n = name
-		self.mhp = 20
+		self.mhp = maxHP
 		self.chp = currentHP
 		self.lmnt = element
 		
 class Attack: #Type (1: normal, 2: elemental), damage depending on type
-	def __init__(self,name,element,damage=4):
+	def __init__(self,name,element=None,damage=4):
 		self.n = name
 		self.lmnt = element
 		self.dmg = damage
+	def get_type(self):
+		if self.n == 'Tackle':
+			self.lmnt = 'Normal'
+		elif self.n == 'Leafage':
+			self.lmnt = 'Grass'
+		elif self.n == 'Ember':
+			self.lmnt = 'Fire'
+		elif self.n == 'Water Gun':
+			self.lmnt = 'Water'
+		else:
+			return("Invalid move")
