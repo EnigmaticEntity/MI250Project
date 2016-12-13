@@ -32,14 +32,3 @@ class Pokemon: #Constructor only name, MaxHP - 20, currentHP
 			return 0
 		elif(offense == 'Grass' and defense == 'Water' or defense == 'Fire' and defense == 'Grass' or defense == 'Water' and defense == 'Fire'):
 			return 2
-		
-class Attack: #Type (1: normal, 2: elemental), damage depending on type
-	def __init__(self,special=False,element=None,damage=4):
-		self.kind = special
-		self.lmnt = element
-		self.dmg = damage
-	def is_special(self):
-		if self.kind == False:
-			self.lmnt = 'Normal'
-		else:
-			self.lmnt = 'Elemental'
