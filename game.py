@@ -147,6 +147,28 @@ print ('''
 
 	</head>
 ''')
+def get_type(self):
+
+		if(self == 'Rowlett' or self == 'Bulbasaur' or self == 'Snivy'):
+
+			return 'Grass'
+
+		elif(self == 'Litten' or self == 'Charmander' or self == 'Tepig'):
+
+			return 'Fire'
+
+		elif(self == 'Popplio' or self == 'Squirtle' or self == 'Oshawott'):
+
+			return 'Water'
+def attack(p1,p2):
+	offense = get_type(p1)
+	defense = get_type(p2)
+	if(offense == defense):
+		return 1
+	elif(offense == 'Grass' and defense == 'Fire' or offense == 'Fire' and offense == 'Water' or offense == 'Water' and offense == 'Grass'):
+		return 0
+	elif(offense == 'Grass' and defense == 'Water' or defense == 'Fire' and defense == 'Grass' or defense == 'Water' and defense == 'Fire'):
+		return 2
 def loadpokemonEM():
     res=dict()
     if os.path.exists("Pokemon.json") and not os.stat("Pokemon.json").st_size == 0:
